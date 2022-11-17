@@ -1,0 +1,119 @@
+apiVersion: v1
+entries:
+  snapshot-controller:
+  - annotations:
+      artifacthub.io/recommendations: |
+        - url: https://artifacthub.io/packages/helm/piraeus-charts/snapshot-validation-webhook
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v2
+    appVersion: v6.1.0
+    created: "2022-11-19T00:30:01.140709599Z"
+    description: |
+      Deploys a Snapshot Controller in a cluster. Snapshot Controllers are often bundled with the Kubernetes distribution,
+      this chart is meant for cases where it is not.
+    digest: f6faddb89f3978da14dd222f2bab98b733c6cbec9b02ef3c286059f1b0bec479
+    home: https://github.com/piraeusdatastore/helm-charts
+    icon: https://raw.githubusercontent.com/piraeusdatastore/piraeus/master/artwork/sandbox-artwork/icon/color.svg
+    keywords:
+    - storage
+    - snapshot
+    maintainers:
+    - name: The Piraeus Maintainers
+      url: https://github.com/piraeusdatastore/
+    name: snapshot-controller
+    sources:
+    - https://github.com/kubernetes-csi/external-snapshotter/
+    type: application
+    urls:
+    - assets/snapshot-controller/snapshot-controller-1.6.1+up1.6.0.tgz
+    version: 1.6.1+up1.6.0
+  snapshot-controller-crd:
+  - annotations:
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v1
+    appVersion: v6.1.0
+    created: "2022-11-19T00:30:01.141051069Z"
+    description: Installs the CRDs for snapshot-controller
+    digest: 3514df4de6d5e7c8ce3e3680bcc3deac4c3a788a93dd2a5f44366b013899a880
+    name: snapshot-controller-crd
+    type: application
+    urls:
+    - assets/snapshot-controller-crd/snapshot-controller-crd-1.6.1+up1.6.0.tgz
+    version: 1.6.1+up1.6.0
+  snapshot-validation-webhook:
+  - annotations:
+      artifacthub.io/recommendations: |
+        - url: https://artifacthub.io/packages/helm/piraeus-charts/snapshot-controller
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v2
+    appVersion: v6.1.0
+    created: "2022-11-19T00:30:01.495944962Z"
+    description: |
+      Deploys the snapshot-validation-webhook and configures your cluster to validate every `VolumeSnapshot` and
+      `VolumeSnapshotContent` resource by sending it to the webhook.
+    digest: ab95e7b4aef5c85be7a4982d07f13bb15946a1194d6e97a1fa71273e6b4103c9
+    home: https://github.com/piraeusdatastore/helm-charts
+    icon: https://raw.githubusercontent.com/piraeusdatastore/piraeus/master/artwork/sandbox-artwork/icon/color.svg
+    keywords:
+    - storage
+    - snapshot
+    - validation
+    maintainers:
+    - name: The Piraeus Maintainers
+      url: https://github.com/piraeusdatastore/
+    name: snapshot-validation-webhook
+    sources:
+    - https://github.com/kubernetes-csi/external-snapshotter/
+    type: application
+    urls:
+    - assets/snapshot-validation-webhook/snapshot-validation-webhook-1.6.1+up1.6.0.tgz
+    version: 1.6.1+up1.6.0
+  traefik:
+  - annotations:
+      artifacthub.io/changes: |
+        - Adds support for namespace overrides in subchart use
+        - Document recent changes in the README (#717)
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v2
+    appVersion: v2.9.4
+    created: "2022-11-19T00:30:01.678788524Z"
+    description: A Traefik based Kubernetes ingress controller
+    digest: 8659f1eaf78d3f7417bd891712f8364ec4004ad315c3cfdd5f4cbe0d2c7040e6
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/v2.3/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel.tomcej@gmail.com
+      name: dtomcej
+    - email: ldez@traefik.io
+      name: ldez
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: charlie.haley@traefik.io
+      name: charlie-haley
+    name: traefik
+    sources:
+    - https://github.com/traefik/traefik
+    - https://github.com/traefik/traefik-helm-chart
+    type: application
+    urls:
+    - assets/traefik/traefik-20.3.1+up20.3.0.tgz
+    version: 20.3.1+up20.3.0
+  traefik-crd:
+  - annotations:
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v1
+    appVersion: v2.9.4
+    created: "2022-11-19T00:30:01.679558738Z"
+    description: Installs the CRDs for traefik
+    digest: 76b2b474f9872d8443313586b47c0230cebab05ab05bf557fb70e3dda8dce59c
+    name: traefik-crd
+    type: application
+    urls:
+    - assets/traefik-crd/traefik-crd-20.3.1+up20.3.0.tgz
+    version: 20.3.1+up20.3.0
+generated: "2022-11-19T00:30:01.139951165Z"

@@ -1,0 +1,10 @@
+--- charts-original/Chart.yaml
++++ charts/Chart.yaml
+@@ -1,6 +1,7 @@
+ annotations:
+   artifacthub.io/recommendations: |
+     - url: https://artifacthub.io/packages/helm/piraeus-charts/snapshot-validation-webhook
++  fleet.cattle.io/bundle-id: k3s
+ apiVersion: v2
+ appVersion: v6.1.0
+ description: |

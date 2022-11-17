@@ -1,0 +1,10 @@
+--- charts-original/Chart.yaml
++++ charts/Chart.yaml
+@@ -2,6 +2,7 @@
+   artifacthub.io/changes: |
+     - Adds support for namespace overrides in subchart use
+     - Document recent changes in the README (#717)
++  fleet.cattle.io/bundle-id: k3s
+ apiVersion: v2
+ appVersion: v2.9.4
+ description: A Traefik based Kubernetes ingress controller
