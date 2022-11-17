@@ -1,0 +1,5 @@
+template: source
+
+validate:
+  url: https://github.com/k3s-io/k3s-charts.git
+  branch: main
