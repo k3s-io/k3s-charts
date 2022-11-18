@@ -1,2 +1,48 @@
 apiVersion: v1
-entries: {}
+entries:
+  traefik:
+  - annotations:
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v2
+    appVersion: 2.9.4
+    created: "2022-11-18T00:41:35.68572575Z"
+    description: A Traefik based Kubernetes ingress controller
+    digest: 4fe4a79a4fc7d2873a7dc0b75e2d57af0e0b65060e464b7b68764a931dfa9d95
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/v2.3/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel.tomcej@gmail.com
+      name: dtomcej
+    - email: ldez@traefik.io
+      name: ldez
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: charlie.haley@traefik.io
+      name: charlie-haley
+    name: traefik
+    sources:
+    - https://github.com/traefik/traefik
+    - https://github.com/traefik/traefik-helm-chart
+    type: application
+    urls:
+    - assets/traefik/traefik-19.0.401+up19.0.4.tgz
+    version: 19.0.401+up19.0.4
+  traefik-crd:
+  - annotations:
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v1
+    appVersion: 2.9.4
+    created: "2022-11-18T00:41:35.687158596Z"
+    description: Installs the CRDs for traefik
+    digest: 7762d816cf9bdf9c1f51c8ed0a83cf13813cbdd3b2df9cc6bb3e2946ef4c1a06
+    name: traefik-crd
+    type: application
+    urls:
+    - assets/traefik-crd/traefik-crd-19.0.401+up19.0.4.tgz
+    version: 19.0.401+up19.0.4
+generated: "0001-01-01T00:00:00Z"
