@@ -72,6 +72,40 @@ entries:
       fleet.cattle.io/bundle-id: k3s
     apiVersion: v2
     appVersion: v2.9.4
+    created: "2022-11-18T23:18:13.532012229Z"
+    description: A Traefik based Kubernetes ingress controller
+    digest: 8804f6bc89accdd2ad7be9e53edb3ced0dfafc79c0f74e5e52fe70f7e1b66207
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/v2.3/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel.tomcej@gmail.com
+      name: dtomcej
+    - email: ldez@traefik.io
+      name: ldez
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: charlie.haley@traefik.io
+      name: charlie-haley
+    name: traefik
+    sources:
+    - https://github.com/traefik/traefik
+    - https://github.com/traefik/traefik-helm-chart
+    type: application
+    urls:
+    - assets/traefik/traefik-20.3.2+up20.3.0.tgz
+    version: 20.3.2+up20.3.0
+  - annotations:
+      artifacthub.io/changes: |
+        - Adds support for namespace overrides in subchart use
+        - Document recent changes in the README (#717)
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v2
+    appVersion: v2.9.4
     created: "2022-11-18T22:39:24.760155843Z"
     description: A Traefik based Kubernetes ingress controller
     digest: be52b171a930b3b7a5451e7ead231a5d6d8c06c9f4adcc7db1addfc404f6622a
@@ -131,6 +165,18 @@ entries:
     - assets/traefik/traefik-19.0.401+up19.0.4.tgz
     version: 19.0.401+up19.0.4
   traefik-crd:
+  - annotations:
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v1
+    appVersion: v2.9.4
+    created: "2022-11-18T23:18:13.534183432Z"
+    description: Installs the CRDs for traefik
+    digest: dc9cb6fdf990740bb66c19f7b8b18e1202fbf3f82f064ce18b72d54cde17b693
+    name: traefik-crd
+    type: application
+    urls:
+    - assets/traefik-crd/traefik-crd-20.3.2+up20.3.0.tgz
+    version: 20.3.2+up20.3.0
   - annotations:
       fleet.cattle.io/bundle-id: k3s
     apiVersion: v1

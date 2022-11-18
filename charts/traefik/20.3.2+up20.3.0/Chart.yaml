@@ -1,0 +1,30 @@
+annotations:
+  artifacthub.io/changes: |
+    - Adds support for namespace overrides in subchart use
+    - Document recent changes in the README (#717)
+  fleet.cattle.io/bundle-id: k3s
+apiVersion: v2
+appVersion: v2.9.4
+description: A Traefik based Kubernetes ingress controller
+home: https://traefik.io/
+icon: https://raw.githubusercontent.com/traefik/traefik/v2.3/docs/content/assets/img/traefik.logo.png
+keywords:
+- traefik
+- ingress
+maintainers:
+- email: emile@vauge.com
+  name: emilevauge
+- email: daniel.tomcej@gmail.com
+  name: dtomcej
+- email: ldez@traefik.io
+  name: ldez
+- email: michel.loiseleur@traefik.io
+  name: mloiseleur
+- email: charlie.haley@traefik.io
+  name: charlie-haley
+name: traefik
+sources:
+- https://github.com/traefik/traefik
+- https://github.com/traefik/traefik-helm-chart
+type: application
+version: 20.3.2+up20.3.0
