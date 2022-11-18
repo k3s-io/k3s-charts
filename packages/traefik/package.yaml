@@ -1,4 +1,6 @@
-url: https://traefik.github.io/charts/traefik/traefik-19.0.4.tgz
+url: https://github.com/traefik/traefik-helm-chart.git
+commit: 09320abb1dfd68f4ecd6ea774ba0aa9ad19a098a
+subdirectory: traefik
 packageVersion: 1
 additionalCharts:
   - workingDir: charts-crd

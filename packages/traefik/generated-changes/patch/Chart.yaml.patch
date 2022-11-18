@@ -1,10 +1,10 @@
 --- charts-original/Chart.yaml
 +++ charts/Chart.yaml
-@@ -1,6 +1,5 @@
- annotations:
--  artifacthub.io/changes: "- \U0001F527 Adds more settings & rename (wrong) scrapeInterval
--    to (valid) interval on ServiceMonitor\n"
+@@ -2,6 +2,7 @@
+   artifacthub.io/changes: |
+     - Adds support for namespace overrides in subchart use
+     - Document recent changes in the README (#717)
 +  fleet.cattle.io/bundle-id: k3s
  apiVersion: v2
- appVersion: 2.9.4
+ appVersion: v2.9.4
  description: A Traefik based Kubernetes ingress controller
