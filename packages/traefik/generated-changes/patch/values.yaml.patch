@@ -1,0 +1,17 @@
+--- charts-original/values.yaml
++++ charts/values.yaml
+@@ -1,6 +1,6 @@
+ # Default values for Traefik
+ image:
+-  name: traefik
++  name: rancher/mirrored-library-traefik
+   # defaults to appVersion
+   tag: ""
+   pullPolicy: IfNotPresent
+@@ -720,3 +720,6 @@
+ # In some cases, it can avoid the need for additional, extended or adhoc deployments.
+ # See #595 for more details and traefik/tests/extra.yaml for example.
+ extraObjects: []
++
++global:
++  systemDefaultRegistry: ""
