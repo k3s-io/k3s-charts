@@ -1,0 +1,4 @@
+url: https://github.com/piraeusdatastore/helm-charts.git
+subdirectory: charts/snapshot-validation-webhook
+commit: 380a339ed3b9108e26eb03805c91525ed016e21e
+packageVersion: 1
