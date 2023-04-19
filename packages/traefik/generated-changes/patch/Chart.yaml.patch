@@ -1,10 +1,15 @@
 --- charts-original/Chart.yaml
 +++ charts/Chart.yaml
-@@ -2,6 +2,7 @@
-   artifacthub.io/changes: |
-     - Adds support for namespace overrides in subchart use
-     - Document recent changes in the README (#717)
+@@ -1,10 +1,7 @@
+ annotations:
+-  artifacthub.io/changes: "- \"⬆️ Upgrade traefik Docker tag to v2.9.8\"\n- \"\U0001F6A8
+-    Fail when enabling PSP on Kubernetes v1.25+ (#801)\"\n- \"Separate UDP hostPort
+-    for HTTP/3\"\n- \"feat: Add volumeName to PersistentVolumeClaim (#792)\"\n- \"Allow
+-    setting TLS options on dashboard IngressRoute\"\n"
 +  fleet.cattle.io/bundle-id: k3s
  apiVersion: v2
- appVersion: v2.9.4
+-appVersion: v2.9.8
++appVersion: v2.9.10
  description: A Traefik based Kubernetes ingress controller
+ home: https://traefik.io/
+ icon: https://raw.githubusercontent.com/traefik/traefik/v2.3/docs/content/assets/img/traefik.logo.png
