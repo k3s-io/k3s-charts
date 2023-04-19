@@ -70,6 +70,39 @@ entries:
     version: 1.6.1+up1.6.0
   traefik:
   - annotations:
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v2
+    appVersion: v2.9.10
+    created: "2023-04-19T21:24:30.217700266Z"
+    description: A Traefik based Kubernetes ingress controller
+    digest: 0f720b5aa017e327e73d45e33f9619ee308f465a2060d0981e090978bf077f3f
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/v2.3/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel.tomcej@gmail.com
+      name: dtomcej
+    - email: ldez@traefik.io
+      name: ldez
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: charlie.haley@traefik.io
+      name: charlie-haley
+    name: traefik
+    sources:
+    - https://github.com/traefik/traefik
+    - https://github.com/traefik/traefik-helm-chart
+    type: application
+    urls:
+    - assets/traefik/traefik-21.2.1+up21.2.0.tgz
+    version: 21.2.1+up21.2.0
+  - annotations:
       artifacthub.io/changes: |
         - Adds support for namespace overrides in subchart use
         - Document recent changes in the README (#717)
@@ -104,6 +137,18 @@ entries:
     - assets/traefik/traefik-20.3.1+up20.3.0.tgz
     version: 20.3.1+up20.3.0
   traefik-crd:
+  - annotations:
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v1
+    appVersion: v2.9.10
+    created: "2023-04-19T21:24:30.219211303Z"
+    description: Installs the CRDs for traefik
+    digest: 89430c2a2e3e50d21c8ed7fa2c16148b9638094c32e603a2f8e29d35a3df4316
+    name: traefik-crd
+    type: application
+    urls:
+    - assets/traefik-crd/traefik-crd-21.2.1+up21.2.0.tgz
+    version: 21.2.1+up21.2.0
   - annotations:
       fleet.cattle.io/bundle-id: k3s
     apiVersion: v1
