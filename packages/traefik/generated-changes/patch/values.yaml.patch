@@ -1,20 +1,22 @@
 --- charts-original/values.yaml
 +++ charts/values.yaml
-@@ -1,8 +1,8 @@
- # Default values for Traefik
- image:
+@@ -3,9 +3,9 @@
+   # -- Traefik image host registry
+   registry: docker.io
+   # -- Traefik image repository
 -  repository: traefik
 +  repository: rancher/mirrored-library-traefik
-   # defaults to appVersion
+   # -- defaults to appVersion
 -  tag: ""
-+  tag: "2.9.10"
++  tag: "v2.10.5"
+   # -- Traefik image pull policy
    pullPolicy: IfNotPresent
  
+@@ -945,3 +945,7 @@
  #
-@@ -869,3 +869,6 @@
- #
- ## This will override the default app.kubernetes.io/instance label for all Objects.
+ ## -- This will override the default app.kubernetes.io/instance label for all Objects.
  # instanceLabelOverride: traefik
++
 +#
 +global:
 +  systemDefaultRegistry: ""

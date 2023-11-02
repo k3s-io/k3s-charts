@@ -1,9 +1,9 @@
 --- charts-original/templates/_helpers.tpl
 +++ charts/templates/_helpers.tpl
-@@ -121,3 +121,11 @@
-     {{- tpl (.value | toYaml) .context }}
-   {{- end }}
+@@ -129,3 +129,11 @@
+ {{ (split "@" (default $.Chart.AppVersion $.Values.image.tag))._0 }}
  {{- end -}}
+ 
 +
 +{{- define "system_default_registry" -}}
 +{{- if .Values.global.systemDefaultRegistry -}}
@@ -12,3 +12,4 @@
 +{{- "" -}}
 +{{- end -}}
 +{{- end -}}
+\ No newline at end of file

@@ -70,6 +70,51 @@ entries:
     version: 1.6.1+up1.6.0
   traefik:
   - annotations:
+      artifacthub.io/changes: "- \"feat: ✨ add healthcheck ingressRoute\"\n- \"feat:
+        :boom: support http redirections and http challenges with cert-manager\"\n-
+        \"feat: :boom: rework and allow update of namespace policy for Gateway\"\n-
+        \"fix: disable ClusterRole and ClusterRoleBinding when not needed\"\n- \"fix:
+        detect correctly v3 version when using sha in `image.tag`\"\n- \"fix: allow
+        updateStrategy.rollingUpdate.maxUnavailable to be passed in as an int or string\"\n-
+        \"fix: add missing separator in crds\"\n- \"fix: add Prometheus scraping annotations
+        only if serviceMonitor not created\"\n- \"docs: Fix typo in the default values
+        file\"\n- \"chore: remove label whitespace at TLSOption\"\n- \"chore(release):
+        \U0001F680 publish v25.0.0\"\n- \"chore(deps): update traefik docker tag to
+        v2.10.5\"\n- \"chore(deps): update docker.io/helmunittest/helm-unittest docker
+        tag to v3.12.3\"\n- \"chore(ci): \U0001F527 \U0001F477 add e2e test when releasing\"\n"
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v2
+    appVersion: v2.10.5
+    created: "2023-11-02T23:29:11.098873891+02:00"
+    description: A Traefik based Kubernetes ingress controller
+    digest: 51e068b9679243095e62fefce31d474d1b8e49e7fe35048b362553e09bfd2eb0
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/v2.3/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel.tomcej@gmail.com
+      name: dtomcej
+    - email: ldez@traefik.io
+      name: ldez
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: charlie.haley@traefik.io
+      name: charlie-haley
+    name: traefik
+    sources:
+    - https://github.com/traefik/traefik
+    - https://github.com/traefik/traefik-helm-chart
+    type: application
+    urls:
+    - assets/traefik/traefik-25.0.1+up25.0.0.tgz
+    version: 25.0.1+up25.0.0
+  - annotations:
       fleet.cattle.io/bundle-id: k3s
     apiVersion: v2
     appVersion: v2.9.10
@@ -137,6 +182,18 @@ entries:
     - assets/traefik/traefik-20.3.1+up20.3.0.tgz
     version: 20.3.1+up20.3.0
   traefik-crd:
+  - annotations:
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v1
+    appVersion: v2.10.5
+    created: "2023-11-02T23:19:44.238517111+02:00"
+    description: Installs the CRDs for traefik
+    digest: 26094beb46593e777d9c37823df042574c31830bcaf629baf17e99f8dbc4f668
+    name: traefik-crd
+    type: application
+    urls:
+    - assets/traefik-crd/traefik-crd-25.0.1+up25.0.0.tgz
+    version: 25.0.1+up25.0.0
   - annotations:
       fleet.cattle.io/bundle-id: k3s
     apiVersion: v1

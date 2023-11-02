@@ -1,6 +1,6 @@
 --- charts-original/templates/_podtemplate.tpl
 +++ charts/templates/_podtemplate.tpl
-@@ -35,7 +35,7 @@
+@@ -50,7 +50,7 @@
        shareProcessNamespace: true
        {{- end }}
        containers:
