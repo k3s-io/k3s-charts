@@ -1,0 +1,3 @@
+workingDir: ""
+url: https://github.com/rancher/rke2-charts/raw/main/assets/rke2-multus/rke2-multus-v4.0.2-build2023081108.tgz
+subdirectory: charts/rke2-whereabouts

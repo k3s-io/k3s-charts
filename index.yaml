@@ -1,5 +1,23 @@
 apiVersion: v1
 entries:
+  k3s-multus:
+  - apiVersion: v2
+    appVersion: 4.0.2
+    created: "2024-02-15T18:57:41.607736257+01:00"
+    description: Multus Helm chart for Kubernetes
+    digest: ba4d67b34f5ad9e101cb61dba22e9b4b0f5c1e8289bb2bc53f667a92dd9f94ae
+    home: https://github.com/k8snetworkplumbingwg/multus-cni
+    icon: https://raw.githubusercontent.com/k8snetworkplumbingwg/multus-cni/master/doc/images/Multus.png
+    maintainers:
+    - email: charts@rancher.com
+      name: Rancher Labs
+    name: k3s-multus
+    sources:
+    - https://github.com/intel/multus-cni
+    type: application
+    urls:
+    - assets/k3s-multus/k3s-multus-4.0.201+upv4.0.2-build2024020801.tgz
+    version: 4.0.201+upv4.0.2-build2024020801
   snapshot-controller:
   - annotations:
       artifacthub.io/recommendations: |
