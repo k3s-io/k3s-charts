@@ -14,7 +14,7 @@
  - email: charts@rancher.com
    name: Rancher Labs
 -name: rke2-multus
-+name: k3s-multus
++name: multus
  sources:
  - https://github.com/intel/multus-cni
  type: application
