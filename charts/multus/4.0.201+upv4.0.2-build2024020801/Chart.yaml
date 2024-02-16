@@ -6,7 +6,7 @@ icon: https://raw.githubusercontent.com/k8snetworkplumbingwg/multus-cni/master/d
 maintainers:
 - email: charts@rancher.com
   name: Rancher Labs
-name: k3s-multus
+name: multus
 sources:
 - https://github.com/intel/multus-cni
 type: application
