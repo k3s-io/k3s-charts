@@ -1,0 +1,13 @@
+apiVersion: v2
+appVersion: 4.0.2
+description: Multus Helm chart for Kubernetes
+home: https://github.com/k8snetworkplumbingwg/multus-cni
+icon: https://raw.githubusercontent.com/k8snetworkplumbingwg/multus-cni/master/doc/images/Multus.png
+maintainers:
+- email: charts@rancher.com
+  name: Rancher Labs
+name: multus
+sources:
+- https://github.com/intel/multus-cni
+type: application
+version: 4.0.201+upv4.0.2-build2024020802
