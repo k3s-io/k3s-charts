@@ -1,9 +1,0 @@
---- charts-original/values.yaml
-+++ charts/values.yaml
-@@ -133,6 +133,3 @@
- global:
-   systemDefaultRegistry: ""
- 
--rke2-whereabouts:
--  enabled: false
--  
