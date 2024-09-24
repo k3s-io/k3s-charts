@@ -88,6 +88,36 @@ entries:
     version: 1.6.1+up1.6.0
   traefik:
   - annotations:
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v2
+    appVersion: v2.11.10
+    created: "2024-09-24T19:38:51.049466574Z"
+    description: A Traefik based Kubernetes ingress controller
+    digest: c1da3c9da9184e3c7699f7113e94207b226e3329ac3b4df477f83b2c500eb789
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/v2.3/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: charlie.haley@traefik.io
+      name: charlie-haley
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    - name: jnoordsij
+    name: traefik
+    sources:
+    - https://github.com/traefik/traefik
+    - https://github.com/traefik/traefik-helm-chart
+    type: application
+    urls:
+    - assets/traefik/traefik-27.0.201+up27.0.2.tgz
+    version: 27.0.201+up27.0.2
+  - annotations:
       artifacthub.io/changes: "- \"feat: ✨ add healthcheck ingressRoute\"\n- \"feat:
         :boom: support http redirections and http challenges with cert-manager\"\n-
         \"feat: :boom: rework and allow update of namespace policy for Gateway\"\n-
@@ -290,6 +320,18 @@ entries:
     - assets/traefik/traefik-20.3.1+up20.3.0.tgz
     version: 20.3.1+up20.3.0
   traefik-crd:
+  - annotations:
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v1
+    appVersion: v2.11.10
+    created: "2024-09-24T19:38:51.056207024Z"
+    description: Installs the CRDs for traefik
+    digest: 26ecec408a0c08fd4e757a513908d6d08ffc037da8c44a09d325786016cb976f
+    name: traefik-crd
+    type: application
+    urls:
+    - assets/traefik-crd/traefik-crd-27.0.201+up27.0.2.tgz
+    version: 27.0.201+up27.0.2
   - annotations:
       fleet.cattle.io/bundle-id: k3s
     apiVersion: v1
