@@ -1,10 +1,13 @@
 --- charts-original/Chart.yaml
 +++ charts/Chart.yaml
-@@ -11,6 +11,7 @@
-     update traefik docker tag to v2.10.5\"\n- \"chore(deps): update docker.io/helmunittest/helm-unittest
-     docker tag to v3.12.3\"\n- \"chore(ci): \U0001F527 \U0001F477 add e2e test when
-     releasing\"\n"
+@@ -1,8 +1,7 @@
+ annotations:
+-  artifacthub.io/changes: |
+-    - "feat: ✨ update Traefik Proxy to v2.11.2"
 +  fleet.cattle.io/bundle-id: k3s
  apiVersion: v2
- appVersion: v2.10.5
+-appVersion: v2.11.2
++appVersion: v2.11.10
  description: A Traefik based Kubernetes ingress controller
+ home: https://traefik.io/
+ icon: https://raw.githubusercontent.com/traefik/traefik/v2.3/docs/content/assets/img/traefik.logo.png
