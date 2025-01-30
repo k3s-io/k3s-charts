@@ -1,24 +1,24 @@
 --- charts-original/values.yaml
 +++ charts/values.yaml
-@@ -1,11 +1,9 @@
- # Default values for Traefik
- image:
+@@ -3,12 +3,10 @@
+ # Declare variables to be passed into templates
+ 
+ image:  # @schema additionalProperties: false
 -  # -- Traefik image host registry
 -  registry: docker.io
    # -- Traefik image repository
 -  repository: traefik
 +  repository: rancher/mirrored-library-traefik
    # -- defaults to appVersion
--  tag: ""
-+  tag: "v2.10.11"
+-  tag:  # @schema type:[string, null]
++  tag: "v3.3.2"
    # -- Traefik image pull policy
    pullPolicy: IfNotPresent
  
-@@ -992,3 +990,7 @@
- #
- ## -- This will override the default app.kubernetes.io/instance label for all Objects.
- # instanceLabelOverride: traefik
+@@ -993,3 +991,6 @@
+         traceParent: ""
+         # -- Name of the header that will contain the tracestate copy.
+         traceState: ""
 +
-+#
 +global:
 +  systemDefaultRegistry: ""
