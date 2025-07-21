@@ -42,11 +42,11 @@ entries:
       fleet.cattle.io/bundle-id: k3s
     apiVersion: v2
     appVersion: v6.1.0
-    created: "2022-11-19T00:30:01.140709599Z"
+    created: "2025-07-21T12:57:51.472750527+02:00"
     description: 'Deploys a Snapshot Controller in a cluster. Snapshot Controllers
       are often bundled with the Kubernetes distribution, this chart is meant for
       cases where it is not. '
-    digest: f6faddb89f3978da14dd222f2bab98b733c6cbec9b02ef3c286059f1b0bec479
+    digest: 1fab697545ed5dbab2b428ebf15b7f639c464d657415e9758007da6327f7c241
     home: https://github.com/piraeusdatastore/helm-charts
     icon: https://raw.githubusercontent.com/piraeusdatastore/piraeus/master/artwork/sandbox-artwork/icon/color.svg
     keywords:
@@ -82,11 +82,11 @@ entries:
       fleet.cattle.io/bundle-id: k3s
     apiVersion: v2
     appVersion: v6.1.0
-    created: "2022-11-19T00:30:01.495944962Z"
+    created: "2025-07-21T12:57:51.473520378+02:00"
     description: 'Deploys the snapshot-validation-webhook and configures your cluster
       to validate every `VolumeSnapshot` and `VolumeSnapshotContent` resource by sending
       it to the webhook. '
-    digest: ab95e7b4aef5c85be7a4982d07f13bb15946a1194d6e97a1fa71273e6b4103c9
+    digest: d17a122c6a32deb0cf19133936547764449c694907c060a4c4931deeb6445a40
     home: https://github.com/piraeusdatastore/helm-charts
     icon: https://raw.githubusercontent.com/piraeusdatastore/piraeus/master/artwork/sandbox-artwork/icon/color.svg
     keywords:

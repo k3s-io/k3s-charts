@@ -4,9 +4,9 @@ annotations:
   fleet.cattle.io/bundle-id: k3s
 apiVersion: v2
 appVersion: v6.1.0
-description: |
-  Deploys a Snapshot Controller in a cluster. Snapshot Controllers are often bundled with the Kubernetes distribution,
-  this chart is meant for cases where it is not.
+description: 'Deploys a Snapshot Controller in a cluster. Snapshot Controllers are
+  often bundled with the Kubernetes distribution, this chart is meant for cases where
+  it is not. '
 home: https://github.com/piraeusdatastore/helm-charts
 icon: https://raw.githubusercontent.com/piraeusdatastore/piraeus/master/artwork/sandbox-artwork/icon/color.svg
 keywords:
