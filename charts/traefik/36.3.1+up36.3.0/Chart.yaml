@@ -1,0 +1,27 @@
+annotations:
+  artifacthub.io/changes: "- \"feat(deps): update traefik docker tag to v3.4.3\"\n-
+    \"feat(deployment): allow null and 0 replicas\"\n- \"chore(release): \U0001F680
+    publish 36.3.0\"\n"
+  fleet.cattle.io/bundle-id: k3s
+apiVersion: v2
+appVersion: v3.4.3
+description: A Traefik based Kubernetes ingress controller
+home: https://traefik.io/
+icon: https://raw.githubusercontent.com/traefik/traefik/master/docs/content/assets/img/traefik.logo.png
+keywords:
+- traefik
+- ingress
+- networking
+kubeVersion: '>=1.22.0-0'
+maintainers:
+- email: michel.loiseleur@traefik.io
+  name: mloiseleur
+- email: remi.buisson@traefik.io
+  name: darkweaver87
+- name: jnoordsij
+name: traefik
+sources:
+- https://github.com/traefik/traefik-helm-chart
+- https://github.com/traefik/traefik
+type: application
+version: 36.3.1+up36.3.0

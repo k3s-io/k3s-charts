@@ -18,6 +18,23 @@ entries:
     urls:
     - assets/multus/multus-4.0.201+upv4.0.2-build2024020801.tgz
     version: 4.0.201+upv4.0.2-build2024020801
+  - apiVersion: v2
+    appVersion: 4.0.2
+    created: "2025-07-21T12:46:08.171161484+02:00"
+    description: Multus Helm chart for Kubernetes
+    digest: 826ddd94bbe7098121ce3544ee4998045799a0a9832142eee0bb18e6ddf9bd92
+    home: https://github.com/k8snetworkplumbingwg/multus-cni
+    icon: https://raw.githubusercontent.com/k8snetworkplumbingwg/multus-cni/master/doc/images/Multus.png
+    maintainers:
+    - email: charts@rancher.com
+      name: Rancher Labs
+    name: multus
+    sources:
+    - https://github.com/intel/multus-cni
+    type: application
+    urls:
+    - assets/multus/multus-4.0.201+upv4.0.2-build2024020802.tgz
+    version: 4.0.201+upv4.0.2-build2024020802
   snapshot-controller:
   - annotations:
       artifacthub.io/recommendations: |
@@ -26,9 +43,9 @@ entries:
     apiVersion: v2
     appVersion: v6.1.0
     created: "2022-11-19T00:30:01.140709599Z"
-    description: |
-      Deploys a Snapshot Controller in a cluster. Snapshot Controllers are often bundled with the Kubernetes distribution,
-      this chart is meant for cases where it is not.
+    description: 'Deploys a Snapshot Controller in a cluster. Snapshot Controllers
+      are often bundled with the Kubernetes distribution, this chart is meant for
+      cases where it is not. '
     digest: f6faddb89f3978da14dd222f2bab98b733c6cbec9b02ef3c286059f1b0bec479
     home: https://github.com/piraeusdatastore/helm-charts
     icon: https://raw.githubusercontent.com/piraeusdatastore/piraeus/master/artwork/sandbox-artwork/icon/color.svg
@@ -66,9 +83,9 @@ entries:
     apiVersion: v2
     appVersion: v6.1.0
     created: "2022-11-19T00:30:01.495944962Z"
-    description: |
-      Deploys the snapshot-validation-webhook and configures your cluster to validate every `VolumeSnapshot` and
-      `VolumeSnapshotContent` resource by sending it to the webhook.
+    description: 'Deploys the snapshot-validation-webhook and configures your cluster
+      to validate every `VolumeSnapshot` and `VolumeSnapshotContent` resource by sending
+      it to the webhook. '
     digest: ab95e7b4aef5c85be7a4982d07f13bb15946a1194d6e97a1fa71273e6b4103c9
     home: https://github.com/piraeusdatastore/helm-charts
     icon: https://raw.githubusercontent.com/piraeusdatastore/piraeus/master/artwork/sandbox-artwork/icon/color.svg
@@ -87,6 +104,37 @@ entries:
     - assets/snapshot-validation-webhook/snapshot-validation-webhook-1.6.1+up1.6.0.tgz
     version: 1.6.1+up1.6.0
   traefik:
+  - annotations:
+      artifacthub.io/changes: "- \"feat(deps): update traefik docker tag to v3.4.3\"\n-
+        \"feat(deployment): allow null and 0 replicas\"\n- \"chore(release): \U0001F680
+        publish 36.3.0\"\n"
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v2
+    appVersion: v3.4.3
+    created: "2025-07-21T12:51:54.432345422+02:00"
+    description: A Traefik based Kubernetes ingress controller
+    digest: fd516088ecdb493f3a8f01cd9606a62d6a1e01d68a07917f4b73b03d0675fa40
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/master/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    - name: jnoordsij
+    name: traefik
+    sources:
+    - https://github.com/traefik/traefik-helm-chart
+    - https://github.com/traefik/traefik
+    type: application
+    urls:
+    - assets/traefik/traefik-36.3.1+up36.3.0.tgz
+    version: 36.3.1+up36.3.0
   - annotations:
       fleet.cattle.io/bundle-id: k3s
     apiVersion: v2
@@ -350,6 +398,18 @@ entries:
     - assets/traefik/traefik-20.3.1+up20.3.0.tgz
     version: 20.3.1+up20.3.0
   traefik-crd:
+  - annotations:
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v1
+    appVersion: v3.4.3
+    created: "2025-07-21T12:46:08.224812383+02:00"
+    description: Installs the CRDs for traefik
+    digest: af2b02289415feb2f58334f4997f5c1043e7db636331fa369b0df8b1be99a216
+    name: traefik-crd
+    type: application
+    urls:
+    - assets/traefik-crd/traefik-crd-36.3.1+up36.3.0.tgz
+    version: 36.3.1+up36.3.0
   - annotations:
       fleet.cattle.io/bundle-id: k3s
     apiVersion: v1

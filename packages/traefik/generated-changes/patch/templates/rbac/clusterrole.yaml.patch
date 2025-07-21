@@ -1,0 +1,11 @@
+--- charts-original/templates/rbac/clusterrole.yaml
++++ charts/templates/rbac/clusterrole.yaml
+@@ -35,7 +35,7 @@
+   - apiGroups:
+       - ""
+     resources:
+-      {{- if and .Values.providers.kubernetesCRD.enabled (semverCompare ">=v3.4.0-0" $version) }}
++      {{- if .Values.providers.kubernetesCRD.enabled }}
+       - configmaps
+       {{- end }}
+       - nodes

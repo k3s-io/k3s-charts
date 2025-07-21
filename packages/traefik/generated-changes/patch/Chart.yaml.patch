@@ -1,11 +1,10 @@
 --- charts-original/Chart.yaml
 +++ charts/Chart.yaml
-@@ -1,7 +1,5 @@
- annotations:
--  artifacthub.io/changes: "- \"fix: :bug: permanent redirect should be disableable\"\n-
--    \"feat: :sparkles: add hub tracing capabilities\"\n- \"docs: \U0001F4DA️ fix typo
--    in Guidelines.md\"\n- \"chore(release): publish v34.2.0\"\n"
+@@ -2,6 +2,7 @@
+   artifacthub.io/changes: "- \"feat(deps): update traefik docker tag to v3.4.3\"\n-
+     \"feat(deployment): allow null and 0 replicas\"\n- \"chore(release): \U0001F680
+     publish 36.3.0\"\n"
 +  fleet.cattle.io/bundle-id: k3s
  apiVersion: v2
- appVersion: v3.3.2
+ appVersion: v3.4.3
  description: A Traefik based Kubernetes ingress controller
