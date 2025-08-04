@@ -16,7 +16,7 @@
    # -- Traefik image pull policy
    pullPolicy: IfNotPresent
  
-@@ -598,7 +596,8 @@
+@@ -603,7 +601,8 @@
          insecureSkipVerify: false
  
  global:

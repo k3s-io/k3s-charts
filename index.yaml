@@ -105,6 +105,46 @@ entries:
     version: 1.6.1+up1.6.0
   traefik:
   - annotations:
+      artifacthub.io/changes: |
+        - "fix(observability): allow `tracing.sampleRate` to be set to zero"
+        - "fix(entryPoint): allow scheme to be unset on redirect"
+        - "fix(Deployment): revision history should be disableable"
+        - "feat(podtemplate): add support for localPlugins"
+        - "feat(podtemplate): add capacity to set GOMEMLIMIT with default at 90% of user-set memory limit"
+        - "feat(hub): offline mode"
+        - "feat(gateway-api)!: support selector for namespace policy"
+        - "feat(deps): update traefik docker tag to v3.5.0"
+        - "feat(CRDs): update for Traefik Proxy v3.5 and Gateway API v1.3.0"
+        - "feat(CRDs): update Traefik Hub to v1.21.0"
+        - "docs(plugins): improve wording and sync with `VALUES.md`"
+        - "chore(release): :rocket: publish 37.0.0 and 1.10.0"
+    apiVersion: v2
+    appVersion: v3.5.0
+    created: "2025-08-04T11:10:06.856566627+02:00"
+    description: A Traefik based Kubernetes ingress controller
+    digest: c601d72421cd34824e99460a42b31825a1f824336bd29a930c1eadc5344d4fa0
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/master/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    - name: jnoordsij
+    name: traefik
+    sources:
+    - https://github.com/traefik/traefik-helm-chart
+    - https://github.com/traefik/traefik
+    type: application
+    urls:
+    - assets/traefik/traefik-37.0.1+up37.0.0.tgz
+    version: 37.0.1+up37.0.0
+  - annotations:
       artifacthub.io/changes: "- \"feat(deps): update traefik docker tag to v3.4.3\"\n-
         \"feat(deployment): allow null and 0 replicas\"\n- \"chore(release): \U0001F680
         publish 36.3.0\"\n"
@@ -398,6 +438,18 @@ entries:
     - assets/traefik/traefik-20.3.1+up20.3.0.tgz
     version: 20.3.1+up20.3.0
   traefik-crd:
+  - annotations:
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v1
+    appVersion: v3.5.0
+    created: "2025-08-04T11:10:06.877581113+02:00"
+    description: Installs the CRDs for traefik
+    digest: 0662c7cabb2c3497397ae0c5583fbb961b5b22610b4005c25b86a66759281264
+    name: traefik-crd
+    type: application
+    urls:
+    - assets/traefik-crd/traefik-crd-37.0.1+up37.0.0.tgz
+    version: 37.0.1+up37.0.0
   - annotations:
       fleet.cattle.io/bundle-id: k3s
     apiVersion: v1
