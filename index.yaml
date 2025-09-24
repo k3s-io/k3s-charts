@@ -396,6 +396,18 @@ entries:
   - annotations:
       fleet.cattle.io/bundle-id: k3s
     apiVersion: v1
+    appVersion: v3.5.1
+    created: "2025-09-24T09:45:05.249573942-07:00"
+    description: Installs the CRDs for traefik
+    digest: cd4fe56f825f77c1d63d48f28529668f8afe73a7dd29fedd41bc76289d43a660
+    name: traefik-crd
+    type: application
+    urls:
+    - assets/traefik-crd/traefik-crd-37.1.1+up37.1.0.tgz
+    version: 37.1.1+up37.1.0
+  - annotations:
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v1
     appVersion: v3.3.2
     created: "2025-01-30T00:28:24.344625587Z"
     description: Installs the CRDs for traefik
