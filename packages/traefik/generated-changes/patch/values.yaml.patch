@@ -1,24 +1,23 @@
 --- charts-original/values.yaml
 +++ charts/values.yaml
-@@ -3,12 +3,10 @@
- # Declare variables to be passed into templates
- 
- image:  # @schema additionalProperties: false
--  # -- Traefik image host registry
--  registry: docker.io
+@@ -6,10 +6,10 @@
+   # -- Traefik image host registry
+   registry: docker.io
    # -- Traefik image repository
 -  repository: traefik
 +  repository: rancher/mirrored-library-traefik
-   # -- defaults to appVersion
+   # -- defaults to appVersion. It's used for version checking, even prefixed with experimental- or latest-.
+   # When a digest is required, `versionOverride` can be used to set the version.
 -  tag:  # @schema type:[string, null]
-+  tag: "v3.3.2"
++  tag: "v3.5.1"
    # -- Traefik image pull policy
    pullPolicy: IfNotPresent
  
-@@ -993,3 +991,6 @@
-         traceParent: ""
-         # -- Name of the header that will contain the tracestate copy.
-         traceState: ""
-+
-+global:
+@@ -614,6 +614,7 @@
+         insecureSkipVerify: false
+ 
+ global:
 +  systemDefaultRegistry: ""
+   checkNewVersion: true
+   # -- Please take time to consider whether or not you wish to share anonymous data with us
+   # See https://doc.traefik.io/traefik/contributing/data-collection/
