@@ -88,6 +88,37 @@ entries:
     version: 1.6.1+up1.6.0
   traefik:
   - annotations:
+      artifacthub.io/changes: "- \"fix(ports): \U0001F41B add missing `http.maxHeaderBytes`
+        option\"\n- \"fix(ports): \U0001F41B `http.encodedCharacters` on custom entrypoints\"\n-
+        \"chore(release): \U0001F680 publish traefik 38.0.1\"\n"
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v2
+    appVersion: v3.6.5
+    created: "2026-01-05T10:26:24.683143936-08:00"
+    description: A Traefik based Kubernetes ingress controller
+    digest: a3ede7046355ade7f76610820ace55a9d46c5ee68a863684fd3e9690e391f570
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/master/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    - name: jnoordsij
+    name: traefik
+    sources:
+    - https://github.com/traefik/traefik-helm-chart
+    - https://github.com/traefik/traefik
+    type: application
+    urls:
+    - assets/traefik/traefik-38.0.101+up38.0.1.tgz
+    version: 38.0.101+up38.0.1
+  - annotations:
       artifacthub.io/changes: |
         - "refactor: remove `$root` hacks in favor of using `$`"
         - "refactor: only render `--global.checkNewVersion` when it differs from default"
@@ -393,6 +424,18 @@ entries:
     - assets/traefik/traefik-20.3.1+up20.3.0.tgz
     version: 20.3.1+up20.3.0
   traefik-crd:
+  - annotations:
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v1
+    appVersion: v3.6.6
+    created: "2026-01-05T10:26:24.69917558-08:00"
+    description: Installs the CRDs for traefik
+    digest: dc64a13a75af8eb52efb302cbeb2c66c096171ddd9371a64b645d463e1a55bb9
+    name: traefik-crd
+    type: application
+    urls:
+    - assets/traefik-crd/traefik-crd-38.0.101+up38.0.1.tgz
+    version: 38.0.101+up38.0.1
   - annotations:
       fleet.cattle.io/bundle-id: k3s
     apiVersion: v1
