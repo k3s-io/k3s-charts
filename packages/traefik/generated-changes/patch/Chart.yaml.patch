@@ -1,10 +1,10 @@
 --- charts-original/Chart.yaml
 +++ charts/Chart.yaml
-@@ -14,6 +14,7 @@
-     - "feat(CRDs): add gatewayAPI experimental channel option"
-     - "docs(plugins): Sync VALUES.md"
-     - "chore(release): :rocket: Publish 37.1.0 and 1.11.0"
+@@ -2,6 +2,7 @@
+   artifacthub.io/changes: "- \"fix(ports): \U0001F41B add missing `http.maxHeaderBytes`
+     option\"\n- \"fix(ports): \U0001F41B `http.encodedCharacters` on custom entrypoints\"\n-
+     \"chore(release): \U0001F680 publish traefik 38.0.1\"\n"
 +  fleet.cattle.io/bundle-id: k3s
  apiVersion: v2
- appVersion: v3.5.1
+ appVersion: v3.6.5
  description: A Traefik based Kubernetes ingress controller
