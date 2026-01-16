@@ -88,6 +88,40 @@ entries:
     version: 1.6.1+up1.6.0
   traefik:
   - annotations:
+      artifacthub.io/changes: |
+        - "revert(CRDs): use Traefik Hub v3.18.0 compatible crds"
+        - "fix(security): set the seccomp profile to RuntimeDefault"
+        - "fix(CRDs): enforce the fact that this Chart does not support Traefik Hub v3.19.0"
+        - "feat(deps): update traefik docker tag to v3.6.6"
+        - "chore(release): publish traefik 38.0.2 and crds 1.13.1"
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v2
+    appVersion: v3.6.6
+    created: "2026-01-16T16:29:33.103653274+01:00"
+    description: A Traefik based Kubernetes ingress controller
+    digest: 5be22ac677278dd87e62d69b2db7637fde576114b609d39d2496ebd790977f9a
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/master/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    - name: jnoordsij
+    name: traefik
+    sources:
+    - https://github.com/traefik/traefik-helm-chart
+    - https://github.com/traefik/traefik
+    type: application
+    urls:
+    - assets/traefik/traefik-38.0.201+up38.0.2.tgz
+    version: 38.0.201+up38.0.2
+  - annotations:
       artifacthub.io/changes: "- \"fix(ports): \U0001F41B add missing `http.maxHeaderBytes`
         option\"\n- \"fix(ports): \U0001F41B `http.encodedCharacters` on custom entrypoints\"\n-
         \"chore(release): \U0001F680 publish traefik 38.0.1\"\n"
@@ -424,6 +458,18 @@ entries:
     - assets/traefik/traefik-20.3.1+up20.3.0.tgz
     version: 20.3.1+up20.3.0
   traefik-crd:
+  - annotations:
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v1
+    appVersion: v3.6.6
+    created: "2026-01-16T16:29:33.121667351+01:00"
+    description: Installs the CRDs for traefik
+    digest: 8d59ed0c7031e824d5bda788f3acd2d29ab0785b0ae0983ab0dca682666db3bb
+    name: traefik-crd
+    type: application
+    urls:
+    - assets/traefik-crd/traefik-crd-38.0.201+up38.0.2.tgz
+    version: 38.0.201+up38.0.2
   - annotations:
       fleet.cattle.io/bundle-id: k3s
     apiVersion: v1
