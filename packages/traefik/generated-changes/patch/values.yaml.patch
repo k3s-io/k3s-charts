@@ -9,12 +9,12 @@
    # -- defaults to appVersion. It's used for version checking, even prefixed with experimental- or latest-.
    # When a digest is required, `versionOverride` can be used to set the version.
 -  tag:  # @schema type:[string, null]
-+  tag: "v3.6.7"
++  tag: "v3.6.9"
    # -- Traefik image pull policy
    pullPolicy: IfNotPresent
  
-@@ -762,6 +762,7 @@
-         insecureSkipVerify: false
+@@ -775,6 +775,7 @@
+         insecureSkipVerify:  # @schema type:[boolean, null]
  
  global:
 +  systemDefaultRegistry: ""
