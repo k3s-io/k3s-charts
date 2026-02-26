@@ -88,6 +88,38 @@ entries:
     version: 1.6.1+up1.6.0
   traefik:
   - annotations:
+      artifacthub.io/changes: "- \"chore(release): \U0001F680 publish traefik 39.0.2\"\n-
+        \"docs: fix typo in examples\"\n- \"chore(deps): update helm/kind-action action
+        to v1.14.0\"\n- \"feat: :package: allow IBM cloud values\"\n- \"chore(ci):
+        lint on pr title\"\n"
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v2
+    appVersion: v3.6.9
+    created: "2026-02-26T17:32:28.969458839+01:00"
+    description: A Traefik based Kubernetes ingress controller
+    digest: 04c43cf2c06d6eafe23055531d7ecec3389d17db2049d28fe36fc510b4e522b2
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/master/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    - name: jnoordsij
+    name: traefik
+    sources:
+    - https://github.com/traefik/traefik-helm-chart
+    - https://github.com/traefik/traefik
+    type: application
+    urls:
+    - assets/traefik/traefik-39.0.201+up39.0.2.tgz
+    version: 39.0.201+up39.0.2
+  - annotations:
       artifacthub.io/changes: |
         - "revert(CRDs): use Traefik Hub v3.18.0 compatible crds"
         - "fix(security): set the seccomp profile to RuntimeDefault"
@@ -458,6 +490,18 @@ entries:
     - assets/traefik/traefik-20.3.1+up20.3.0.tgz
     version: 20.3.1+up20.3.0
   traefik-crd:
+  - annotations:
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v1
+    appVersion: v3.6.9
+    created: "2026-02-26T17:32:28.991082429+01:00"
+    description: Installs the CRDs for traefik
+    digest: 8fe3eebafe32a75e0dcd12a7c71088392e8cd7dfd1ee18adec34cf29bc9d8364
+    name: traefik-crd
+    type: application
+    urls:
+    - assets/traefik-crd/traefik-crd-39.0.201+up39.0.2.tgz
+    version: 39.0.201+up39.0.2
   - annotations:
       fleet.cattle.io/bundle-id: k3s
     apiVersion: v1
