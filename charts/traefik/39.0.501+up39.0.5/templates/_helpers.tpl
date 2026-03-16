@@ -31,7 +31,7 @@ Create the chart image name.
 {{- printf "%s/%s:%s" .Values.global.azure.images.proxy.registry .Values.global.azure.images.proxy.image .Values.global.azure.images.proxy.tag }}
  {{- end -}}
 {{- else -}}
-{{- printf "%s/%s:%s" .Values.image.registry .Values.image.repository (.Values.image.tag | default .Chart.AppVersion) }}
+{{- printf "%s:%s" .Values.image.repository (.Values.image.tag | default .Chart.AppVersion) }}
 {{- end -}}
 {{- end -}}
 
@@ -215,7 +215,11 @@ The version can comes many sources: appVersion, image.tag, override, marketplace
  {{- else -}}
   {{- $imageVersion := ($.Values.oci_meta.enabled | ternary $.Values.oci_meta.images.proxy.tag $.Values.image.tag) -}}
   {{- $imageVersion = ($.Values.global.azure.enabled | ternary $.Values.global.azure.images.proxy.tag $imageVersion) -}}
-  {{- (split "@" (default $.Chart.AppVersion $imageVersion))._0 | replace "latest-" "" | replace "experimental-" "" }}
+  {{- $version := (split "@" (default $.Chart.AppVersion $imageVersion))._0 | replace "latest-" "" | replace "experimental-" "" | replace "master" $.Chart.AppVersion }}
+  {{- if not (regexMatch `^v?\d+(\.\d+)?(\.\d+)?(-.*)?` $version) -}}
+    {{- fail (printf "ERROR: version %q is not supported" $imageVersion) -}}
+  {{- end -}}
+  {{- $version -}}
  {{- end -}}
 {{- end -}}
 
@@ -455,3 +459,11 @@ Check if using old localPlugin hostPath structure (for deprecation warning)
    {{- end }}
   {{- end }}
 {{- end }}
+
+{{- define "system_default_registry" -}}
+{{- if .Values.global.systemDefaultRegistry -}}
+{{- printf "%s/" .Values.global.systemDefaultRegistry -}}
+{{- else -}}
+{{- "" -}}
+{{- end -}}
+{{- end -}}
