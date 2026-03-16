@@ -6,10 +6,10 @@ image:  # @schema additionalProperties: false
   # -- Traefik image host registry
   registry: docker.io
   # -- Traefik image repository
-  repository: traefik
+  repository: rancher/mirrored-library-traefik
   # -- defaults to appVersion. It's used for version checking, even prefixed with experimental- or latest-.
   # When a digest is required, `versionOverride` can be used to set the version.
-  tag:  # @schema type:[string, null]
+  tag: "v3.6.10"
   # -- Traefik image pull policy
   pullPolicy: IfNotPresent
 
@@ -775,6 +775,7 @@ tracing:  # @schema additionalProperties: false
         insecureSkipVerify:  # @schema type:[boolean, null]
 
 global:
+  systemDefaultRegistry: ""
   checkNewVersion: true
   # -- Please take time to consider whether or not you wish to share anonymous data with us
   # See https://doc.traefik.io/traefik/contributing/data-collection/
@@ -1111,8 +1112,6 @@ rbac:  # @schema additionalProperties: false
   # Enable user-facing roles
   # https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles
   aggregateTo: []
-  # List of Kubernetes secrets that are accessible for Traefik. If empty, then access is granted to every secret.
-  secretResourceNames: []
 
 # -- Enable to create a PodSecurityPolicy and assign it to the Service Account via RoleBinding or ClusterRoleBinding
 podSecurityPolicy:

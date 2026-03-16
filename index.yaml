@@ -88,6 +88,40 @@ entries:
     version: 1.6.1+up1.6.0
   traefik:
   - annotations:
+      artifacthub.io/changes: |
+        - "fix: :bug: handle experimental-master and fail gracefully"
+        - "fix(nginx): add required RBAC for v3.7"
+        - "fix(gateway): setting port value for `websecure` listener can fail"
+        - "feat: upgrade traefik to version v3.6.10"
+        - "chore(release): publish v39.0.5"
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v2
+    appVersion: v3.6.10
+    created: "2026-03-16T07:43:13.427760919+01:00"
+    description: A Traefik based Kubernetes ingress controller
+    digest: 888de9d098769b9199238076bee225d1b10dba1e889b0e28127eddc38cdb435b
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/master/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    - name: jnoordsij
+    name: traefik
+    sources:
+    - https://github.com/traefik/traefik-helm-chart
+    - https://github.com/traefik/traefik
+    type: application
+    urls:
+    - assets/traefik/traefik-39.0.501+up39.0.5.tgz
+    version: 39.0.501+up39.0.5
+  - annotations:
       artifacthub.io/changes: "- \"chore(release): \U0001F680 publish traefik 39.0.2\"\n-
         \"docs: fix typo in examples\"\n- \"chore(deps): update helm/kind-action action
         to v1.14.0\"\n- \"feat: :package: allow IBM cloud values\"\n- \"chore(ci):
@@ -490,6 +524,18 @@ entries:
     - assets/traefik/traefik-20.3.1+up20.3.0.tgz
     version: 20.3.1+up20.3.0
   traefik-crd:
+  - annotations:
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v1
+    appVersion: v3.6.10
+    created: "2026-03-16T07:49:40.839246175+01:00"
+    description: Installs the CRDs for traefik
+    digest: c6245bdcfd193d10ec956d90c50e0d1a3fa1bde541df80744e72eee91b054640
+    name: traefik-crd
+    type: application
+    urls:
+    - assets/traefik-crd/traefik-crd-39.0.501+up39.0.5.tgz
+    version: 39.0.501+up39.0.5
   - annotations:
       fleet.cattle.io/bundle-id: k3s
     apiVersion: v1
