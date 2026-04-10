@@ -88,6 +88,36 @@ entries:
     version: 1.6.1+up1.6.0
   traefik:
   - annotations:
+      artifacthub.io/changes: "- \"feat(deps): update traefik docker tag to v3.6.12
+        (v39.0)\"\n- \"chore(release): \U0001F680 publish v39.0.7\"\n"
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v2
+    appVersion: v3.6.12
+    created: "2026-04-10T09:23:22.345011663+02:00"
+    description: A Traefik based Kubernetes ingress controller
+    digest: 1978f4c9af3551076728735250955f452eae47247e530f366bde4c92f98059c6
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/master/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    - name: jnoordsij
+    name: traefik
+    sources:
+    - https://github.com/traefik/traefik-helm-chart
+    - https://github.com/traefik/traefik
+    type: application
+    urls:
+    - assets/traefik/traefik-39.0.701+up39.0.7.tgz
+    version: 39.0.701+up39.0.7
+  - annotations:
       artifacthub.io/changes: |
         - "fix: :bug: handle experimental-master and fail gracefully"
         - "fix(nginx): add required RBAC for v3.7"
@@ -524,6 +554,18 @@ entries:
     - assets/traefik/traefik-20.3.1+up20.3.0.tgz
     version: 20.3.1+up20.3.0
   traefik-crd:
+  - annotations:
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v1
+    appVersion: v3.6.12
+    created: "2026-04-10T09:23:22.376721024+02:00"
+    description: Installs the CRDs for traefik
+    digest: 236ea501beabad36a2a612d415242b1a4850e273a29a6051e4bf5290490320c6
+    name: traefik-crd
+    type: application
+    urls:
+    - assets/traefik-crd/traefik-crd-39.0.701+up39.0.7.tgz
+    version: 39.0.701+up39.0.7
   - annotations:
       fleet.cattle.io/bundle-id: k3s
     apiVersion: v1
