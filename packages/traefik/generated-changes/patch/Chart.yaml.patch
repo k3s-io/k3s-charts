@@ -1,10 +1,10 @@
 --- charts-original/Chart.yaml
 +++ charts/Chart.yaml
-@@ -1,6 +1,7 @@
- annotations:
-   artifacthub.io/changes: "- \"feat(deps): update traefik docker tag to v3.6.12 (v39.0)\"\n-
-     \"chore(release): \U0001F680 publish v39.0.7\"\n"
+@@ -5,6 +5,7 @@
+     - "feat(deps): update traefik docker tag to v3.7.1"
+     - "feat(api): support disableDashboardAd option"
+     - "chore(release): publish 40.1.0"
 +  fleet.cattle.io/bundle-id: k3s
- apiVersion: v2
- appVersion: v3.6.12
- description: A Traefik based Kubernetes ingress controller
+   traefik.io/hub-max-version: v3.20.1
+   traefik.io/hub-min-version: v3.19.3
+   traefik.io/proxy-max-version: v3.7.1
