@@ -97,6 +97,44 @@ entries:
       fleet.cattle.io/bundle-id: k3s
       traefik.io/hub-max-version: v3.20.1
       traefik.io/hub-min-version: v3.19.3
+      traefik.io/proxy-max-version: v3.7.4
+      traefik.io/proxy-min-version: v3.6.0
+    apiVersion: v2
+    appVersion: v3.7.1
+    created: "2026-06-08T15:54:27.278274132+02:00"
+    description: A Traefik based Kubernetes ingress controller
+    digest: bf31a0bb92ee012c0332bd2a86c970d4ff25bc98f2e8b58b2e6f0b76bb21ece9
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/master/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    kubeVersion: '>=1.25.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    - name: jnoordsij
+    name: traefik
+    sources:
+    - https://github.com/traefik/traefik-helm-chart
+    - https://github.com/traefik/traefik
+    type: application
+    urls:
+    - assets/traefik/traefik-40.1.3+up40.1.0.tgz
+    version: 40.1.3+up40.1.0
+  - annotations:
+      artifacthub.io/changes: |
+        - "fix(ingressroute): :bug: use spec.ingressClassName with Proxy v3.7+"
+        - "feat(provider/kubernetesIngressNGINX): set default values on httpentrypoint & httpsentrypoint"
+        - "feat(deps): update traefik docker tag to v3.7.1"
+        - "feat(api): support disableDashboardAd option"
+        - "chore(release): publish 40.1.0"
+      fleet.cattle.io/bundle-id: k3s
+      traefik.io/hub-max-version: v3.20.1
+      traefik.io/hub-min-version: v3.19.3
       traefik.io/proxy-max-version: v3.7.1
       traefik.io/proxy-min-version: v3.6.0
     apiVersion: v2
@@ -630,6 +668,18 @@ entries:
     - assets/traefik/traefik-20.3.1+up20.3.0.tgz
     version: 20.3.1+up20.3.0
   traefik-crd:
+  - annotations:
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v1
+    appVersion: v3.7.1
+    created: "2026-06-08T15:54:27.316815367+02:00"
+    description: Installs the CRDs for traefik
+    digest: 5e54903d0004ff008c7199de3a7be5896803c359d03c5a2ad4eb40c2c7613273
+    name: traefik-crd
+    type: application
+    urls:
+    - assets/traefik-crd/traefik-crd-40.1.3+up40.1.0.tgz
+    version: 40.1.3+up40.1.0
   - annotations:
       fleet.cattle.io/bundle-id: k3s
     apiVersion: v1
