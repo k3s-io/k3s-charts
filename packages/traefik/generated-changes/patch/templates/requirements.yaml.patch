@@ -1,0 +1,12 @@
+--- charts-original/templates/requirements.yaml
++++ charts/templates/requirements.yaml
+@@ -5,9 +5,6 @@
+   {{- if (semverCompare (printf "<%s-0" $proxyMinVersion) $version) }}
+     {{- fail (printf "ERROR: This version of the Chart only supports Traefik Proxy %s+" $proxyMinVersion) -}}
+   {{- end }}
+-  {{- if and (eq (include "traefik.isStableVersion" $version) "true") (semverCompare (printf ">%s" $proxyMaxVersion) $version) }}
+-    {{- fail (printf "ERROR: This version of the Chart only supports Traefik Proxy up to %s." $proxyMaxVersion) -}}
+-  {{- end }}
+ {{- end }}
+ 
+ {{- if and .Values.hub.enabled (not (contains "traefik-hub" .Values.image.repository)) }}
