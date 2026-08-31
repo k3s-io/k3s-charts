@@ -89,6 +89,91 @@ entries:
   traefik:
   - annotations:
       artifacthub.io/changes: |
+        - kind: fixed
+          description: "fix: hub/proxy mapping"
+        - kind: fixed
+          description: "fix(rbac): restore secretResourceNames for namespaced role"
+        - kind: added
+          description: "feat: deprecate `underscoreHeadersStrategy` value"
+        - kind: added
+          description: "feat: add `aliasHeadersStrategy` value"
+        - kind: added
+          description: "feat(hub): support apiManagement OpenAPI refresh interval"
+        - kind: added
+          description: "feat(deps): update traefik docker tag to v3.7.12"
+        - kind: added
+          description: "feat(deps): update ghcr.io/traefik/traefik-hub docker tag to v3.20.12"
+      fleet.cattle.io/bundle-id: k3s
+      traefik.io/hub-max-version: v3.20.12
+      traefik.io/hub-min-version: v3.19.3
+      traefik.io/proxy-max-version: v3.7.12
+      traefik.io/proxy-min-version: v3.6.0
+    apiVersion: v2
+    appVersion: v3.7.12
+    created: "2026-08-31T12:16:32.150653778+02:00"
+    description: A Traefik based Kubernetes ingress controller
+    digest: 7bbd3b3bf5fd0fd6d0c9d3372f64c650799b67d3c8789a9c1203ff3655b69355
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/master/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    kubeVersion: '>=1.25.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    - name: jnoordsij
+    name: traefik
+    sources:
+    - https://github.com/traefik/traefik-helm-chart
+    - https://github.com/traefik/traefik
+    type: application
+    urls:
+    - assets/traefik/traefik-41.4.1+up41.4.0.tgz
+    version: 41.4.1+up41.4.0
+  - annotations:
+      artifacthub.io/changes: |
+        - "fix(ingressroute): :bug: use spec.ingressClassName with Proxy v3.7+"
+        - "feat(provider/kubernetesIngressNGINX): set default values on httpentrypoint & httpsentrypoint"
+        - "feat(deps): update traefik docker tag to v3.7.1"
+        - "feat(api): support disableDashboardAd option"
+        - "chore(release): publish 40.1.0"
+      fleet.cattle.io/bundle-id: k3s
+      traefik.io/hub-max-version: v3.20.1
+      traefik.io/hub-min-version: v3.19.3
+      traefik.io/proxy-max-version: v3.7.1
+      traefik.io/proxy-min-version: v3.6.0
+    apiVersion: v2
+    appVersion: v3.7.1
+    created: "2026-08-31T14:01:20.933768672+02:00"
+    description: A Traefik based Kubernetes ingress controller
+    digest: d4d0e818284d310372d38adfce9a1cfb3179a69fc9f3ca8bfadb33581000b778
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/master/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    kubeVersion: '>=1.25.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    - name: jnoordsij
+    name: traefik
+    sources:
+    - https://github.com/traefik/traefik-helm-chart
+    - https://github.com/traefik/traefik
+    type: application
+    urls:
+    - assets/traefik/traefik-40.1.5+up40.1.0.tgz
+    version: 40.1.5+up40.1.0
+  - annotations:
+      artifacthub.io/changes: |
         - "fix(ingressroute): :bug: use spec.ingressClassName with Proxy v3.7+"
         - "feat(provider/kubernetesIngressNGINX): set default values on httpentrypoint & httpsentrypoint"
         - "feat(deps): update traefik docker tag to v3.7.1"
@@ -215,7 +300,7 @@ entries:
       traefik.io/proxy-min-version: v3.6.0
     apiVersion: v2
     appVersion: v3.7.1
-    created: "2026-05-28T17:18:43.574054469+02:00"
+    created: "2026-08-31T12:46:09.220424905+02:00"
     description: A Traefik based Kubernetes ingress controller
     digest: a73dca09f692a54ed2bb99ba7229e4b4e8f4c4f224c453303975051834a93db8
     home: https://traefik.io/
@@ -706,6 +791,30 @@ entries:
     - assets/traefik/traefik-20.3.1+up20.3.0.tgz
     version: 20.3.1+up20.3.0
   traefik-crd:
+  - annotations:
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v1
+    appVersion: v3.7.1
+    created: "2026-08-31T12:28:23.690763654+02:00"
+    description: Installs the CRDs for traefik
+    digest: a2a0e632e81aedc4f8c93efe83e24734051dd52145d83aa15b950cd4513aaebd
+    name: traefik-crd
+    type: application
+    urls:
+    - assets/traefik-crd/traefik-crd-41.4.1+up41.4.0.tgz
+    version: 41.4.1+up41.4.0
+  - annotations:
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v1
+    appVersion: v3.7.1
+    created: "2026-08-31T13:06:59.980872576+02:00"
+    description: Installs the CRDs for traefik
+    digest: 749676684b53240c9024578b8e211053d4e6881c3d54dccb66d5308a01bcb489
+    name: traefik-crd
+    type: application
+    urls:
+    - assets/traefik-crd/traefik-crd-40.1.5+up40.1.0.tgz
+    version: 40.1.5+up40.1.0
   - annotations:
       fleet.cattle.io/bundle-id: k3s
     apiVersion: v1
