@@ -110,6 +110,53 @@ entries:
       traefik.io/proxy-min-version: v3.6.0
     apiVersion: v2
     appVersion: v3.7.12
+    created: "2026-09-01T12:41:00.376285618+02:00"
+    description: A Traefik based Kubernetes ingress controller
+    digest: b78f0b7d76c88daf9b8cdf6993bde76a4e93b90980dbfb75209e44764971e98c
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/master/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    kubeVersion: '>=1.25.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    - name: jnoordsij
+    name: traefik
+    sources:
+    - https://github.com/traefik/traefik-helm-chart
+    - https://github.com/traefik/traefik
+    type: application
+    urls:
+    - assets/traefik/traefik-41.4.2+up41.4.0.tgz
+    version: 41.4.2+up41.4.0
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: fixed
+          description: "fix: hub/proxy mapping"
+        - kind: fixed
+          description: "fix(rbac): restore secretResourceNames for namespaced role"
+        - kind: added
+          description: "feat: deprecate `underscoreHeadersStrategy` value"
+        - kind: added
+          description: "feat: add `aliasHeadersStrategy` value"
+        - kind: added
+          description: "feat(hub): support apiManagement OpenAPI refresh interval"
+        - kind: added
+          description: "feat(deps): update traefik docker tag to v3.7.12"
+        - kind: added
+          description: "feat(deps): update ghcr.io/traefik/traefik-hub docker tag to v3.20.12"
+      fleet.cattle.io/bundle-id: k3s
+      traefik.io/hub-max-version: v3.20.12
+      traefik.io/hub-min-version: v3.19.3
+      traefik.io/proxy-max-version: v3.7.12
+      traefik.io/proxy-min-version: v3.6.0
+    apiVersion: v2
+    appVersion: v3.7.12
     created: "2026-08-31T12:16:32.150653778+02:00"
     description: A Traefik based Kubernetes ingress controller
     digest: 7bbd3b3bf5fd0fd6d0c9d3372f64c650799b67d3c8789a9c1203ff3655b69355
@@ -791,6 +838,18 @@ entries:
     - assets/traefik/traefik-20.3.1+up20.3.0.tgz
     version: 20.3.1+up20.3.0
   traefik-crd:
+  - annotations:
+      fleet.cattle.io/bundle-id: k3s
+    apiVersion: v1
+    appVersion: v3.7.1
+    created: "2026-09-01T12:41:00.424523537+02:00"
+    description: Installs the CRDs for traefik
+    digest: ce6acfefa2c9a991ac7906c3d8164be0b28721c00fa9e8d9f884d3f88a81db35
+    name: traefik-crd
+    type: application
+    urls:
+    - assets/traefik-crd/traefik-crd-41.4.2+up41.4.0.tgz
+    version: 41.4.2+up41.4.0
   - annotations:
       fleet.cattle.io/bundle-id: k3s
     apiVersion: v1

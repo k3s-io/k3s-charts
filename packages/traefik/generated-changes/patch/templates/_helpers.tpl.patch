@@ -5,7 +5,7 @@
  {{- else if .Values.image.digest -}}
  {{- printf "%s/%s@%s" (include "traefik.imageRegistry" .) (include "traefik.imageRepository" .) .Values.image.digest }}
 -{{- else -}}
-+{{- else if .Values.hub.hardened.enabled -}}
++{{- else if eq (include "traefik.hub.enabled" .) "true" -}}
  {{- printf "%s/%s:%s%s" (include "traefik.imageRegistry" .) (include "traefik.imageRepository" .) (.Values.image.tag | default (include "traefik.defaultTag" .)) (ternary "-hardened" "" .Values.hub.hardened) }}
 +{{- else -}}
 +{{- printf "%s:%s" .Values.image.repository (.Values.image.tag | default .Chart.AppVersion) }}
