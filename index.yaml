@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   gateway-api-crd:
   - apiVersion: v2
+    appVersion: v1.6.2
+    created: "2026-10-06T22:28:31.754342368+02:00"
+    description: Helm chart for Gateway API CRDs
+    digest: fad7062ad20b907df6b3eefd0f43af10aa4b9fcf887bf3b39ec896cda9cb815e
+    name: gateway-api-crd
+    type: application
+    urls:
+    - assets/gateway-api-crd/gateway-api-crd-1.6.201.tgz
+    version: 1.6.201
+  - apiVersion: v2
     appVersion: v1.6.1
     created: "2026-09-02T23:11:11.434041425+02:00"
     description: Helm chart for Gateway API CRDs
