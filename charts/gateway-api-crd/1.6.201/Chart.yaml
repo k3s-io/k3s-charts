@@ -3,4 +3,4 @@ appVersion: v1.6.2
 description: Helm chart for Gateway API CRDs
 name: gateway-api-crd
 type: application
-version: 1.6.2
+version: 1.6.201
