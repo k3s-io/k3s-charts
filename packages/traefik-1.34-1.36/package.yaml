@@ -1,8 +1,8 @@
 url: https://traefik.github.io/charts/traefik/traefik-40.1.0.tgz
-packageVersion: 6
+packageVersion: 7
 additionalCharts:
-  - workingDir: charts-crd
-    crdOptions:
-      templateDirectory: crd-template
-      crdDirectory: templates
-      addCRDValidationToMainChart: true
+- workingDir: charts-crd
+  crdOptions:
+    templateDirectory: crd-template
+    crdDirectory: templates
+    addCRDValidationToMainChart: true
