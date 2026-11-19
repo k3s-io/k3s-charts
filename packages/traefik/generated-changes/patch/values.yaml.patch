@@ -1,7 +1,7 @@
 --- charts-original/values.yaml
 +++ charts/values.yaml
 @@ -6,10 +6,10 @@
-   # -- Traefik image host registry. Defaults to `docker.io` for Traefik Proxy and `ghcr.io` for Traefik Hub (when `hub.enabled` is true).
+   # -- Traefik image host registry. Defaults to `global.imageRegistry` when set, otherwise `docker.io` for Traefik Proxy and `ghcr.io` for Traefik Hub (when `hub.enabled` is true).
    registry:  # @schema type:[string, null]
    # -- Traefik image repository. Defaults to `traefik` for Traefik Proxy and `traefik/traefik-hub` for Traefik Hub (when `hub.enabled` is true).
 -  repository:  # @schema type:[string, null]
@@ -13,7 +13,7 @@
    # -- Traefik image digest (e.g. `sha256:abc...`). When set, takes precedence over `tag`. Set `versionOverride` alongside it so the chart's version-checking logic knows the version (it cannot be derived from the digest).
    digest:  # @schema type:[string, null]; pattern:^sha256:[a-f0-9]{64}$
    # -- Traefik image pull policy
-@@ -880,6 +880,7 @@
+@@ -896,6 +896,7 @@
          insecureSkipVerify:  # @schema type:[boolean, null]
  
  global:
