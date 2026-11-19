@@ -1,10 +1,10 @@
 --- charts-original/Chart.yaml
 +++ charts/Chart.yaml
-@@ -2,6 +2,7 @@
-   artifacthub.io/changes: |
-     - kind: added
-       description: "feat(hub): support traefik hub v3.21.0"
+@@ -10,6 +10,7 @@
+       description: "feat(deps): update traefik docker tag to v3.7.19"
+     - kind: changed
+       description: "chore(deps): update github actions"
 +  fleet.cattle.io/bundle-id: k3s
-   traefik.io/hub-max-version: v3.21.0
+   traefik.io/hub-max-version: v3.21.12
    traefik.io/hub-min-version: v3.19.3
-   traefik.io/proxy-max-version: v3.7.13
+   traefik.io/proxy-max-version: v3.7.19

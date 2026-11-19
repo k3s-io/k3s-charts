@@ -1,6 +1,6 @@
 --- charts-original/templates/_helpers.tpl
 +++ charts/templates/_helpers.tpl
-@@ -61,8 +61,10 @@
+@@ -62,8 +62,10 @@
   {{- end -}}
  {{- else if .Values.image.digest -}}
  {{- printf "%s/%s@%s" (include "traefik.imageRegistry" .) (include "traefik.imageRepository" .) .Values.image.digest }}
@@ -12,7 +12,7 @@
  {{- end -}}
  {{- end -}}
  
-@@ -589,3 +591,11 @@
+@@ -627,3 +629,11 @@
      {{- end -}}
      {{- join " " $drivers -}}
  {{- end -}}
